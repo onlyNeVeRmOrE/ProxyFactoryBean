@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	
+ <bean id="FooImpl" class="test.edu.javaee.spring.aop.FooImpl"/>
+ 
+ <bean id="fuck" class="test.edu.javaee.spring.aop.SimpleLogAfterReturningAdvice"/>
+ 
+ <bean id="nameMatchMethodPointcutAdvisor" class="dev.edu.javaee.spring.aop.support.NameMatchMethodPointcutAdvisor">
+  <property name="mappedNames" list="printFoo,dummyFoo"> </property>  
+  <property name="advice" ref="fuck"> </property>   
+ </bean>
+ 
+ <bean id="wtf" class="dev.edu.javaee.spring.aop.framework.ProxyFactoryBean">
+    <property name="target" ref="FooImpl"> </property>
+    <property name="proxyInterfaces" value="FooInterface"> </property>    	
+    <property name="interceptorNames" ref="nameMatchMethodPointcutAdvisor"></property>
+  </bean>
+</beans>
