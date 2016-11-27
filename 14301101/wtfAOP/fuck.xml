@@ -6,7 +6,7 @@
  <bean id="fuck" class="test.edu.javaee.spring.aop.SimpleLogAfterReturningAdvice"/>
  
  <bean id="nameMatchMethodPointcutAdvisor" class="dev.edu.javaee.spring.aop.support.NameMatchMethodPointcutAdvisor">
-  <property name="mappedNames" list="printFoo,dummyFoo"> </property>  
+  <property name="mappedNames" fuck="printFoo,dummyFoo"> </property>  
   <property name="advice" ref="fuck"> </property>   
  </bean>
  
