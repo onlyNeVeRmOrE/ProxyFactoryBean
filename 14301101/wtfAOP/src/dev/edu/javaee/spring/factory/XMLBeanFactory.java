@@ -80,8 +80,8 @@ public class XMLBeanFactory extends AbstractBeanFactory{
 	        					propertyValues.AddPropertyValue(new PropertyValue(
 		        						name,bean1));
 	        				}
-	        				else if(ele.getAttribute("list")!=null&&ele.getAttribute("list").toString().length()>0){
-	        					String strlist = ele.getAttribute("list");
+	        				else if(ele.getAttribute("fuck")!=null&&ele.getAttribute("fuck").toString().length()>0){
+	        					String strlist = ele.getAttribute("fuck");
 	        					String[] list =strlist.split(",");
 	        					List<String> mapList = new LinkedList<String>();
 	        					mapList=Arrays.asList(list);
